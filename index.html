@@ -10,17 +10,29 @@
   <title>Frontend Mentor | Contact form</title>
 </head>
 <body>
+  <div id="MensagemSucesso" class="oculto">
+    <strong>Mensagem enviada com sucesso ✅</strong><br>
+    Obrigado por preencher o formulário. Entraremos em contato em breve!
+  </div>
   <main>
-    <form>
+    <form novalidate>
       <h1>Contate-nos</h1>
-      <label for="PriNome">Primeiro nome *</label>
-      <input class="camposTexto" type="text" name="PriNome" id="PriNome" required>
-
-      <label for="Sobrenome">Sobrenome *</label>
-      <input class="camposTexto" type="text" name="Sobrenome" id="Sobrenome" required>
+      <div class="grupoNome">
+        <div class="campoNome">
+          <label for="PriNome">Primeiro nome *</label>
+          <input class="camposTexto" type="text" name="PriNome" id="PriNome" required>
+          <span class="erro" id="erro-priNome">Insira o seu primeiro nome, por favor</span>
+        </div>
+        <div class="campoNome">
+          <label for="Sobrenome">Sobrenome *</label>
+          <input class="camposTexto" type="text" name="Sobrenome" id="Sobrenome" required>
+          <span class="erro" id="erro-sobrenome">Insira o sobrenome, por favor</span>
+        </div>
+      </div>
   
       <label for="Email">E-mail *</label> 
       <input class="camposTexto" type="Email" name="Email" id="Email" required>
+      <span class="erro" id="erro-email">Insira o E-mail, por favor</span>
     
       <p>Tipo de consulta *</p>
       <div class="grupoRadio">
@@ -33,26 +45,24 @@
           Solicitação de suporte
         </label>
       </div>
+      <span class="erro" id="erro-consulta">Insira o tipo de consulta, por favor.</span>
 
-      <label for="Mensagem">Mensagem *</label>
-      <textarea class="camposTexto" name="mensagem" id="Mensagem" rows="4" required></textarea>
+      <label for="Mensagem">Mensagem</label>
+      <textarea class="camposTexto" name="mensagem" id="Mensagem" rows="4"></textarea>
 
       <label for="Consetimento">
         <input class="camposSeleto" type="checkbox" name="consetimento" id="Consetimento">
         Eu permito que a equipe entre em contato *
       </label>
+      <span class="erro" id="erro-consentimento">Para enviar este formulário, consentimento a ser marcado.</span>
 
-      <input id="Butao" type="submit" value="Enviar" required> 
+      <input id="Butao" type="submit" value="Enviar" required>
     </form>
-    Por favor, selecione o tipo de consulta
-    Para enviar este formulário, consentimento a ser marcado.
-    Mensagem enviada!
-    Obrigado por concluir o formulário. Entraremos em contato em breve!
   </main>
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
     Coded by <a href="#">Luís Henrique</a>.
   </footer>
+  <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
