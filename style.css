@@ -2,8 +2,113 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Karla", sans-serif;
 }
-    
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  height: 100%;
+  background-color: #e6f2ec;
+  }
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  height: 100%;
+}
+
+h1 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #222;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+label {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.camposTexto {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.camposSeletos {
+  margin-right: 6px;
+  display: none;
+}
+
+.grupoRadio {
+  display: flex;
+  gap: 10px;
+}
+
+.radioOpcao {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.radioOpcao:hover {
+  border-color: #007b55;
+}
+
+input#Butao {
+  margin-top: 10px;
+  padding: 14px;
+  background: #007b55;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+input#Butao:hover {
+  background: #005f40;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: transparent;
+  font-size: 12px;
+}
+  
 .attribution {
   font-size: 11px;
   text-align: center;

@@ -11,30 +11,38 @@
 </head>
 <body>
   <main>
-    <h1>Contate-nos</h1>
     <form>
+      <h1>Contate-nos</h1>
       <label for="PriNome">Primeiro nome *</label>
-      <input type="text" name="PriNome" id="PriNome" required>
-    
+      <input class="camposTexto" type="text" name="PriNome" id="PriNome" required>
+
       <label for="Sobrenome">Sobrenome *</label>
-      <input type="text" name="Sobrenome" id="Sobrenome" required>
-      <br>
-      <label for="Email">E-mail *</label>
-      <input type="Email" name="Email" id="Email" required>
+      <input class="camposTexto" type="text" name="Sobrenome" id="Sobrenome" required>
+  
+      <label for="Email">E-mail *</label> 
+      <input class="camposTexto" type="Email" name="Email" id="Email" required>
     
       <p>Tipo de consulta *</p>
-      <input type="radio" name="tipoConsulta" id="ConsultaGeral" value="consultageral" required>
-      <label for="ConsultaGeral">Inquérito geral</label>
-      <input type="radio" name="tipoConsulta" id="ConsultaSuporte" value="consultasuporte" required>
-      <label for="ConsultaSuporte">Solicitação de suporte</label>
-      <br>
-      <label for="Mensagem">Mensagem *</label><br>
-      <input type="text" name="mensagem" id="Mensagem">
-      <br>
-      <input type="checkbox" name="consetimento" id="Consetimento">
-      <label for="Consetimento">I consent to being contacted by the team *</label>
-      <br>
-      <input type="submit" value="Enviar">
+      <div class="grupoRadio">
+        <label class="radioOpcao" for="ConsultaGeral">
+          <input class="camposSeleto" type="radio" name="tipoConsulta" id="ConsultaGeral" value="consultageral" required>
+          Inquérito geral
+        </label>
+        <label class="radioOpcao" for="ConsultaSuporte">
+          <input class="camposSeleto" type="radio" name="tipoConsulta" id="ConsultaSuporte" value="consultasuporte" required>
+          Solicitação de suporte
+        </label>
+      </div>
+
+      <label for="Mensagem">Mensagem *</label>
+      <textarea class="camposTexto" name="mensagem" id="Mensagem" rows="4" required></textarea>
+
+      <label for="Consetimento">
+        <input class="camposSeleto" type="checkbox" name="consetimento" id="Consetimento">
+        Eu permito que a equipe entre em contato *
+      </label>
+
+      <input id="Butao" type="submit" value="Enviar" required> 
     </form>
     Por favor, selecione o tipo de consulta
     Para enviar este formulário, consentimento a ser marcado.
