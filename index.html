@@ -36,12 +36,14 @@
     
       <p>Tipo de consulta *</p>
       <div class="grupoRadio">
+        <input class="camposSeleto" type="radio" name="tipoConsulta" id="ConsultaGeral" value="consultageral" required>
         <label class="radioOpcao" for="ConsultaGeral">
-          <input class="camposSeleto" type="radio" name="tipoConsulta" id="ConsultaGeral" value="consultageral" required>
+          
           Inquérito geral
         </label>
+        <input class="camposSeleto" type="radio" name="tipoConsulta" id="ConsultaSuporte" value="consultasuporte" required>
         <label class="radioOpcao" for="ConsultaSuporte">
-          <input class="camposSeleto" type="radio" name="tipoConsulta" id="ConsultaSuporte" value="consultasuporte" required>
+          
           Solicitação de suporte
         </label>
       </div>
@@ -50,10 +52,13 @@
       <label for="Mensagem">Mensagem</label>
       <textarea class="camposTexto" name="mensagem" id="Mensagem" rows="4"></textarea>
 
-      <label for="Consetimento">
+      <div class="grupoCheckbox">
         <input class="camposSeleto" type="checkbox" name="consetimento" id="Consetimento">
-        Eu permito que a equipe entre em contato *
-      </label>
+        <label for="Consetimento">
+          
+          Eu permito que a equipe entre em contato *
+        </label>
+      </div>
       <span class="erro" id="erro-consentimento">Para enviar este formulário, consentimento a ser marcado.</span>
 
       <input id="Butao" type="submit" value="Enviar" required>
